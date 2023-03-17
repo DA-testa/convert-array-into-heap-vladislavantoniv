@@ -54,9 +54,9 @@ def main():
 
     # output all swaps
         print(m.floor(len(swaps)/2))
-        for i in range(0,len(swaps),2):
-            print(swaps[i],swaps[i+1])
-
+        #for i in range(0,len(swaps),2):
+            #print(swaps[i],swaps[i+1])
+        print(' '.join(map(str,swaps)))
 
 if __name__ == "__main__":
     main()
