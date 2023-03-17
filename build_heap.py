@@ -1,12 +1,32 @@
 # python3
-
-
+import numpy as np
+import math as m
 def build_heap(data):
     swaps = []
-    # TODO: Creat heap and heap sort
+    #TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
-
-
+    for k in data:
+        for i in range(len(data),-1,-1):
+            left=2*i+1
+            if 2*i+2<len(data):
+                right=2*i+2
+                if data[left]<=data[right]:
+                    if data[left]<data[i]:
+                        swaps.append(i)
+                        swaps.append(left)
+                        temp=data[i]
+                        data[i]=data[left]
+                        data[left]=temp
+                        print("left swap")
+                else:
+                    if data[right]<data[i]:
+                        swaps.append(i)
+                        swaps.append(right)
+                        temp=data[i]
+                        data[i]=data[right]
+                        data[right]=temp
+                        print("right swap")
+    print(data)
     return swaps
 
 
@@ -33,9 +53,9 @@ def main():
 
 
     # output all swaps
-    print(len(swaps))
-    for i, j in swaps:
-        print(i, j)
+    print(m.floor(len(swaps)/2))
+    for i in range(0,len(swaps),2):
+        print(swaps[i],swaps[i+1])
 
 
 if __name__ == "__main__":
