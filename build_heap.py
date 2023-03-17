@@ -34,11 +34,12 @@ def main():
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
+    choise=input()
+    if choise=='I':
 
-
-    # input from keyboard
-    n = int(input())
-    data = list(map(int, input().split()))
+        # input from keyboard
+        n = int(input())
+        data = list(map(int, input().split()))
 
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
