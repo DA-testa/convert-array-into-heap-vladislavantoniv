@@ -1,5 +1,4 @@
 # python3
-import numpy as np
 import math as m
 def build_heap(data):
     swaps = []
