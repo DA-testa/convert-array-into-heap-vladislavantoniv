@@ -42,20 +42,20 @@ def main():
         data = list(map(int, input().split()))
 
     # checks if lenght of data is the same as the said lenght
-    assert len(data) == n
+        assert len(data) == n
 
     # calls function to assess the data 
     # and give back all swaps
-    swaps = build_heap(data)
+        swaps = build_heap(data)
 
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
 
 
     # output all swaps
-    print(m.floor(len(swaps)/2))
-    for i in range(0,len(swaps),2):
-        print(swaps[i],swaps[i+1])
+        print(m.floor(len(swaps)/2))
+        for i in range(0,len(swaps),2):
+            print(swaps[i],swaps[i+1])
 
 
 if __name__ == "__main__":
