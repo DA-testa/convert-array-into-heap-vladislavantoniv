@@ -16,7 +16,7 @@ def build_heap(data):
                         temp=data[i]
                         data[i]=data[left]
                         data[left]=temp
-                        print("left swap")
+                        #print("left swap")
                 else:
                     if data[right]<data[i]:
                         swaps.append(i)
@@ -24,8 +24,8 @@ def build_heap(data):
                         temp=data[i]
                         data[i]=data[right]
                         data[right]=temp
-                        print("right swap")
-    print(data)
+                        #print("right swap")
+    #print(data)
     return swaps
 
 
