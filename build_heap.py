@@ -1,7 +1,6 @@
-#python3
+# python3
 def build_heap(data):
     swaps = []
-    #TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
     for k in data:
         for i in range(len(data)//2,-1,-1):
@@ -29,8 +28,6 @@ def build_heap(data):
 
 
 def main():
-    
-    # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
     choise=input()
@@ -46,8 +43,6 @@ def main():
     # calls function to assess the data 
     # and give back all swaps
         swaps = build_heap(data)
-
-    # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
 
 
@@ -71,6 +66,5 @@ def main():
             swaps = build_heap(part1000)
             grandlen=grandlen+len(swaps)//2
         print(grandlen)
-    pass
 if __name__ == "__main__":
     main()
