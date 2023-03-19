@@ -10,16 +10,14 @@ def build_heap(data):
                 right=2*i+2
                 if data[left]<=data[right]:
                     if data[left]<data[i]:
-                        swaps.append(i)
-                        swaps.append(left)
+                        swaps.append((i,left))
                         temp=data[i]
                         data[i]=data[left]
                         data[left]=temp
                         #print(data[i])
                 else:
                     if data[right]<data[i]:
-                        swaps.append(i)
-                        swaps.append(right)
+                        swaps.append((i,right))
                         temp=data[i]
                         data[i]=data[right]
                         data[right]=temp
@@ -52,9 +50,10 @@ def main():
 
 
     # output all swaps
-        print(len(swaps)//2)
-        for i in range(0,len(swaps),2):
-            print(swaps[i],swaps[i+1])
+        print(len(swaps))
+        for i in swaps:
+            print(i[0],i[1])
+
     elif choise=='F':
         filename=input()
         filename="tests/"+filename
