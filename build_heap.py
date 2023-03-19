@@ -1,5 +1,4 @@
 # python3
-import math as m
 def build_heap(data):
     swaps = []
     #TODO: Creat heap and heap sort
@@ -16,7 +15,7 @@ def build_heap(data):
                         temp=data[i]
                         data[i]=data[left]
                         data[left]=temp
-                        #print("left swap")
+                        print(data[i])
                 else:
                     if data[right]<data[i]:
                         swaps.append(i)
@@ -24,7 +23,7 @@ def build_heap(data):
                         temp=data[i]
                         data[i]=data[right]
                         data[right]=temp
-                        #print("right swap")
+                        print(data[i])
     #print(data)
     return swaps
 
@@ -64,12 +63,15 @@ def main():
             print(n)
         with open(filename,"r",encoding="utf8") as f:
             data=list(map(int,f.readlines()[1].split()))
-            print(len(data))
-        #assert len(data) == n    
-        swaps = build_heap(data)
-        print(len(swaps)//2)
-        for i in range(0,len(swaps),2):
-            print(swaps[i],swaps[i+1])
+            #print(data)
+        #assert len(data) == n
+        grandlen=0
+        
+        for i in range(0,len(data),100):
+            part1000=data[i:i+100]
+            swaps = build_heap(part1000)
+            grandlen=grandlen+len(swaps)//2
+        print(grandlen)
     pass
 if __name__ == "__main__":
     main()
