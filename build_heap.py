@@ -15,7 +15,7 @@ def build_heap(data):
                         temp=data[i]
                         data[i]=data[left]
                         data[left]=temp
-                        print(data[i])
+                        #print(data[i])
                 else:
                     if data[right]<data[i]:
                         swaps.append(i)
@@ -23,7 +23,7 @@ def build_heap(data):
                         temp=data[i]
                         data[i]=data[right]
                         data[right]=temp
-                        print(data[i])
+                        #print(data[i])
     #print(data)
     return swaps
 
@@ -66,7 +66,6 @@ def main():
             #print(data)
         #assert len(data) == n
         grandlen=0
-        
         for i in range(0,len(data),100):
             part1000=data[i:i+100]
             swaps = build_heap(part1000)
