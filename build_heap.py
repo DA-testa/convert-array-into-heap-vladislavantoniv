@@ -4,7 +4,7 @@ def build_heap(data):
     #TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
     for k in data:
-        for i in range(len(data),-1,-1):
+        for i in range(len(data)//2,-1,-1):
             left=2*i+1
             if 2*i+2<len(data):
                 right=2*i+2
