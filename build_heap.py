@@ -56,7 +56,20 @@ def main():
         print(len(swaps)//2)
         for i in range(0,len(swaps),2):
             print(swaps[i],swaps[i+1])
-
-
+    elif choise=='F':
+        filename=input()
+        filename="tests/"+filename
+        with open(filename,"r",encoding="utf8") as f:
+            n=f.readlines()[0]
+            print(n)
+        with open(filename,"r",encoding="utf8") as f:
+            data=list(map(int,f.readlines()[1].split()))
+            print(len(data))
+        #assert len(data) == n    
+        swaps = build_heap(data)
+        print(len(swaps)//2)
+        for i in range(0,len(swaps),2):
+            print(swaps[i],swaps[i+1])
+    pass
 if __name__ == "__main__":
     main()
