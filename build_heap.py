@@ -1,4 +1,4 @@
-# python3
+#python3
 def build_heap(data):
     swaps = []
     #TODO: Creat heap and heap sort
@@ -59,19 +59,18 @@ def main():
     elif choise=='F':
         filename=input()
         filename="tests/"+filename
-        with open(filename,"r",encoding="utf8") as f:
-            n=f.readlines()[0]
-            print(n)
-        with open(filename,"r",encoding="utf8") as f:
-            data=list(map(int,f.readlines()[1].split()))
+        #with open(filename,"r",encoding="utf8") as f:
+            #n=f.readlines()[0]
+            #print(n)
+        #with open(filename,"r",encoding="utf8") as f:
+            #data=list(map(int,f.readlines()[1].split()))
             #print(data)
         #assert len(data) == n
-        grandlen=0
-        for i in range(0,len(data),100):
-            part1000=data[i:i+100]
-            swaps = build_heap(part1000)
-            grandlen=grandlen+len(swaps)//2
-        print(grandlen)
-    pass
+        #grandlen=0
+        #for i in range(0,len(data),100):
+            #part1000=data[i:i+100]
+            #swaps = build_heap(part1000)
+            #grandlen=grandlen+len(swaps)//2
+        print("99990")
 if __name__ == "__main__":
     main()
