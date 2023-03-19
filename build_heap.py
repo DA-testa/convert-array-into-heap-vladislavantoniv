@@ -52,9 +52,9 @@ def main():
 
 
     # output all swaps
-        print(len(swaps)//2)
+        print(len(swaps)//2,sep='')
         for i in range(0,len(swaps),2):
-            print(swaps[i], swaps[i+1])
+            print(swaps[i], swaps[i+1],sep=' ')
             
     elif choise=='F':
         filename=input()
